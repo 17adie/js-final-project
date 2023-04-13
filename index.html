@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Todo List App</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body class="px-5 md:px-32 lg:px-72">
+    <header id="header" class="sticky top-0 z-50 bg-white hidden">
+      <nav class="py-3 flex justify-between mb-5">
+        <h1 class="text-xl cursor-pointer">Hi, <strong id="user_name"></strong></h1>
+        <div class="flex flex-1 justify-end">
+          <button type="button" id="exit_btn" class="text-sm font-semibold leading-6 text-gray-900">Exit</button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="crud_container" class="hidden">
+      <h1 class="text-center text-2xl font-bold pt-5">MY TO-DO LIST</h1>
+      <div class="flex justify-center items-center mt-2">
+        <div class="m-2 p-2 rounded-md">
+          <input type="text" id="enter_todo_inp" class="w-48 p-2 text-sm text-gray-900 border border-gray-300 rounded-md md:w-72" placeholder="Enter todo.." />
+          <button type="button" id="add_todo_btn" class="ml-3 p-1 px-3 rounded-md bg-teal-500 text-white font-semibold hover:bg-teal-400">Add</button>
+        </div>
+      </div>
+      <div class="max-w-md mx-auto">
+        <ul id="todo_list"></ul>
+      </div>
+    </div>
+
+    <div id="name_container" class="flex justify-center items-center pt-64">
+      <input type="text" id="enter_name_inp" class="w-48 p-2 text-sm text-gray-900 border border-gray-300 rounded-md" placeholder="Enter your name.." />
+      <button type="button" id="enter_btn" class="ml-3 p-1 px-3 rounded-md bg-teal-500 text-white font-semibold hover:bg-teal-400">Enter</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
